@@ -1,0 +1,269 @@
+/* html-ized markdown */
+/* designed originally by uxamanda (https://discourse.joplinapp.org/u/uxamanda). latest version https://github.com/amandamcg/joplin-theme */
+/* Redesigned by Stephen (robotcorner) https://https://github.com/robotcorner/joplin-theme-dark-gruvbox */
+
+:root {
+    /* My colors */
+    --col-h1: #FFA737;
+    --col-h2: #DC851F;
+    --col-h3: #DC851F;
+    --col-h4: #DC851F;
+    --col-dark: #201F1D;
+    --col-light: #B1CF5F;
+    --col-mark: #73E2A7;
+    /* --col-mark-font: #FBB2D0; */
+    --col-bold: #FFA737;
+    --col-ital: #DEF4C6;
+    --col-border: #73E2A7;
+    --col-border-font: #CCF5DF;
+    --col-link: #5AA9E6;
+    /* End */
+    --font-title: "Liberation Sans Narrow";
+    --font-sans:  "Liberation Sans Narrow"; /*Montserrat or Corbel*/
+    --font-mono:  "SpaceMono Nerd Font";
+    --font-bold:  "Liberation Sans Narrow";
+
+    --font-size: 16px;
+    --mono-size: 14px;
+    --icon-size: var(--font-size);
+}
+
+
+
+.hljs {
+    background-color: black;
+/*     padding: var(--base-size-18); */
+/*     border-radius: var(--base-size-4) !important; */
+}
+
+#rendered-md {
+    font-family: var(--font-sans) !important;
+/*     padding: 3%; */
+}
+
+body {
+    font-family: var(--font-sans) !important;
+    color: var(--col-light);
+    background-color: var(--black);
+    font-size: var(--font-size);
+    font-weight: light !important;
+}
+
+h1, h2, h3, h4, h5, h6, ul, table {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+p {
+    margin-top: 16px !important;
+    margin-bottom: 0px !important;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-sans);
+}
+
+h1 {
+    font-family: var(--font-title) !important;
+    color: var(--col-h1) !important;
+    font-size: calc(var(--font-size)*2) !important;
+/*     padding-left: 4px !important; */
+/*     border-bottom: 2px dotted var(--col-h1) !important; */
+    border-bottom: none !important;
+    text-align: left !important;
+/*     line-height: 20px !important; */
+/*     border-radius: 16px !important; */
+/*     line-height: calc(var(--font-size)*2.5) !important; */
+/*     padding-top: 5px !important; */
+/*     margin-top: 0px !important; */
+/*     font-weight: bold !important; */
+}
+
+h1:first-child {
+    margin-top: 0px !important;
+}
+
+
+
+h2 {
+    color: var(--col-h2) !important;
+    font-size: calc(var(--font-size)*1.5) !important;
+    /* text-align: center !important; */
+/*     font-weight: bold !important; */
+}
+
+h3 {
+    color: var(--col-h3) !important;
+    font-size: calc(var(--font-size)*1.3) !important;
+/*     font-weight: bold !important; */
+}
+
+h4 {
+    color: var(--col-h4) !important;
+    font-size: var(--font-size) !important;
+}
+
+p, li {
+/*     letter-spacing: .03em; */
+    color: var(--col-light);
+/*     margin-bottom: var(--base-size-1) !important; */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Bold */
+strong {
+    font-family: var(--font-bold) !important;
+    color: var(--col-bold) !important;
+    font-weight: bold !important;
+}
+
+/*Italics*/
+em {
+    font-family: var(--font-sans) !important;
+    color: var(--col-ital) !important;
+    font-weight: italic !important;
+}
+
+/* Table title and rows */
+tr, td {
+    font-family: var(--font-sans) !important;
+    color: var(--col-light) !important;
+}
+
+
+/*ol li, ul li {
+    margin-bottom: var(4px);
+}*/
+
+/*ul ul {
+/*     list-style-type: disc; */
+    /*color: var(--col-ital) !important;
+}*/
+
+/*hr {
+    padding: var(--base-size-11) !important;
+}*/
+
+blockquote {
+    color: var(--col-border-font) !important;
+    font-style: regular !important;
+    opacity: 1;
+    padding-right: 4px !important;
+    border-radius: 4px !important;
+    border-left: 4px solid var(--col-border) !important;
+    border-right: 4px solid var(--col-border) !important;
+    background-color: var(--col-dark);
+}
+
+blockquote strong {
+    font-style: bold !important;
+    color: var(--col-border) !important;
+}
+
+blockquote em {
+    font-style: italic !important;
+    color: var(--col-ital) !important;
+}
+
+li.md-checkbox [type="checkbox"]:not(:checked),
+li.md-checkbox [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+    margin-left: -32px !important;
+}
+
+li.md-checkbox [type="checkbox"]:not(:checked) + label,
+li.md-checkbox [type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 1.5em;
+/*     cursor: pointer; */
+    margin-left: -32px !important;
+}
+
+/* checkbox aspect */
+li.md-checkbox [type="checkbox"]:not(:checked) + label:before,
+li.md-checkbox [type="checkbox"]:checked + label:before {
+    content: '☐';
+    position: absolute;
+    left: 0; top: -3px;
+    width: 1em; height: 1em;
+    border: 1px solid var(--black);
+    background: var(--black);
+    border-radius: 1px;
+}
+
+/* checked mark aspect */
+li.md-checkbox [type="checkbox"]:not(:checked) + label:after,
+li.md-checkbox [type="checkbox"]:checked + label:after {
+    content: '✓';
+    position: absolute;
+    left: 2px; top: -4px;
+    width: 1em; height: 1em;
+    border: 1px solid var(--black);
+    background: var(--black);
+    border-radius: 1px;
+    transition: all .2s;
+}
+
+/* checked mark aspect changes */
+li.md-checkbox [type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+
+li.md-checkbox [type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+a, summary {
+    text-decoration: none !important;
+/*     padding: 0 0 4px 0 !important; */
+    color: var(--col-link) !important;
+    font-weight: var(--font-weight-bold) !important;
+}
+
+a:hover {
+    border-bottom: 1px dashed var(--col-link) !important;
+}
+
+/* Links */
+a[data-resource-id] {
+    font-family: var(--font-sans) !important;
+    color: var(--col-link) !important;
+}
+
+a[data-resource-id] :hover {
+    border-bottom: 1px dashed var(--col-link) !important;
+}
+
+/* Code blocks */
+pre {
+    font-family: var(--font-mono) !important;
+    font-size: var(--mono-size) !important;
+    background-color: var(--col-dark) !important;
+    border-radius: 4px !important;
+    color: var(--col-light) !important;
+}
+
+/* ```inline code``` */
+.inline-code {
+/*     font-family: var(--font-mono) !important; */
+    font-size: var(--mono-size) !important;
+    padding: .3em .3em !important;
+    border-radius: 4px !important;
+    background-color: var(--col-dark) !important;
+    border: none !important;
+    color: var(--col-light) !important;
+}
+
+/* ==emphasis== */
+mark {
+    color: black !important;
+    padding: 0 4px !important;
+    border-radius: 4px !important;
+    border: none !important;
+    background-color: var(--col-mark);
+}

@@ -1,0 +1,242 @@
+/* html-ized markdown for entire app */
+/* designed originally by uxamanda (https://discourse.joplinapp.org/u/uxamanda). latest version https://github.com/amandamcg/joplin-theme */
+/* Redesigned by Stephen (robotcorner) https://https://github.com/robotcorner/joplin-theme-dark-gruvbox */
+
+:root {
+    --warm00: #3D0008;
+    --warm01: #4F000B;
+    --warm02: #610019;
+    --warm02-trans: #61001980;
+    --warm03: #720026;
+    --warm04: #CE4257;
+    --warm04-access: #D4596B;
+    --warm05: #E76154;
+    --warm06: #FF7F51;
+    --warm07: #FF9B54;
+
+    --white: #a56bdb;
+    --dark-white: #722bb4;
+    --light-grey: #1e192e;
+    --grey: #060016;
+    --dark-grey: #040010;
+    --darker-grey: #040010;
+    --black: #000000;
+    --blackest: #020007;
+    --red: #a14b1d;
+    --red-dark: #a14b1d;
+    --green: #23CD60;
+    --green-dark: #23CD60;
+    --yellow: #E7AE1D;
+    --yellow-dark: #E7AE1D;
+    --yellow-darkest: #E7AE1D;
+    --blue: #02A4F1;
+    --blue-dark: #02A4F1;
+    --purple: #F459F4;
+    --purple-dark: ##F459F4;
+    --aqua: #00F8F8;
+    --aqua-dark: #00F8F8;
+    --aqua-very-dark: #00F8F8;
+    --orange: #E7AE1D;
+    --orange-dark: #E7AE1D;
+
+    --base-size-1: 1px;
+    --base-size-4: 5px;
+    --base-size-8: 9px;
+    --base-size-10: 11px;
+    --base-size-14: 14px;
+    --base-size-15: 15px;
+    --base-size-16: 16px;
+    --base-size-17: 17px;
+    --base-size-18: 18px;
+    --base-size-24: 24px;
+    --base-size-32: 32px;
+    --base-size-40: 40px;
+    --base-size-272: 272px;
+    --z-toc: 99;
+    --font-weight-light: 200;
+    --font-weight-base: 400;
+    --font-weight-bold: 550;
+    --font-sans: "Ubuntu Condensed", "SpaceMono Nerd Font"; /*Bahnschrift */
+    --font-mono: "JetBrains Mono", "MonoSpatial";
+    --font-icon: "Noto Emoji", "Noto Color Emoji", "FontAwesome";
+    --primary: var(--red);
+    --secondary: var(--yellow);
+    --font-line-height: 1.4em;
+    --font-size: 14px;
+    --font-size-code: 12px;
+    --icon-size: var(--font-size);
+}
+
+* {
+    font-family: var(--font-sans) !important;
+    font-size: var(--font-size) !important;
+    background-color: var(--warm01) !important;
+    color: var(--warm05) !important;
+    border-color: #00000000 !important;
+    scrollbar-color: var(--warm07) !important;
+}
+
+/* Editor */
+.CodeMirror-lines, .CodeMirror-sizer, pre, .CodeMirror-scroll, .CodeMirror-line span {
+    background-color: var(--warm00) !important;
+    color: var(--warm04-access) !important;
+    font-size: var(--font-size-code) !important;
+    font-family: var(--font-mono) !important;
+}
+
+pre {
+    padding: 0px !important;
+    padding-left: 5px !important;
+}
+
+/* Carets on the side */
+.fa, .far, .fas {
+    color: var(--warm07) !important;
+    font-family: var(--font-icon) !important;
+    font-weight: 300 !important;
+}
+.fa-long-arrow-alt-up:before {
+    content: "↟" !important;
+}
+
+.fa-long-arrow-alt-down:before {
+    content: "↡" !important;
+}
+
+.fa-markdown:before {
+    content: "M↓" !important;
+}
+/* .fa-caret-right:before {
+    content: "▸" !important;
+    font-size: 16px !important;
+}
+.fa-caret-down:before {
+    content: "▾" !important;
+    font-size: 16px !important;
+}
+.fa-plus:before {
+    content: "+" !important;
+    color: var(--warm07) !important;
+} */
+
+.fa-folder:before {
+    /* content: "📁" !important; */
+    content: "🌺" !important;
+    display: inline-block;
+    transform: rotate(90deg) !important;
+}
+
+span.title {
+    color: var(--warm06) !important;
+}
+
+.ace_heading {
+    color: var(--warm04) !important;
+}
+
+button {
+    background: var(--warm02) !important;
+    border: 1px solid var(--warm00) !important;
+    color: var(--warm05) !important;
+    border-radius: 5px !important;
+}
+
+button span {
+    background: var(--warm02) !important;
+}
+
+.list-item-container.note-list-item::before {
+    border-bottom: 0px !important;
+}
+
+.list-item-container.selected a {
+    background: var(--warm03) !important;
+}
+
+.list-item-container.selected a span {
+    background: var(--warm03) !important;
+    color: var(--warm07) !important;
+}
+
+.list-item-container.selected .note-count-label,
+.list-item-container.selected .fa-folder,
+.list-item-container.selected .emoji-box,
+.list-item-container.selected .fa-caret-right:before,
+.list-item-container.selected .fa-caret-down:before {
+    background: var(--warm03) !important;
+}
+
+/* .rli-sideBar {
+    border-right: 2px solid var(--warm00) !important;
+} */
+
+.rli-noteList {
+    border-left: 2px solid var(--warm00) !important;
+}
+
+pre .cm-header {
+    color: var(--warm07) !important;
+}
+
+pre .cm-header-1 {
+    font-size: calc(100% + 8px) !important;
+}
+pre .cm-header-2 {
+    font-size: calc(100% + 4px) !important;
+}
+pre .cm-header-3 {
+    font-size: calc(100% + 2px) !important;
+}
+
+pre .cm-tag,
+pre .cm-hd {
+    color: var(--warm03) !important;
+}
+
+pre .cm-strong {
+    color: var(--warm05) !important;
+}
+
+pre .cm-em {
+    color: var(--warm06) !important;
+}
+
+pre .cm-katex-marker-open,
+pre .cm-katex-marker-close {
+    color: black !important;
+}
+
+pre .cm-meta,
+pre .cm-property {
+    color: var(--purple) !important;
+}
+
+pre .cm-comment {
+    color: #777777 !important;
+}
+
+pre .cm-comment.cm-jn-inline-code {
+    border: 0px solid black !important;
+    color: var(--blue) !important;
+}
+
+.cfyNmp {
+    border: 0px solid black !important;
+}
+
+/* .editor-toolbar {
+    background: var(--warm02-trans) !important;
+    border: 2px solid var(--warm00) !important;
+    border-radius: 4px !important;
+}
+
+.editor-toolbar a,
+.editor-toolbar div,
+.editor-toolbar span,
+.editor-toolbar .button {
+    background: #00000000 !important;
+} */
+
+span.updated-time-label {
+    padding-right: 1em !important;
+}

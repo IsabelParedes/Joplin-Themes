@@ -1,0 +1,287 @@
+/* html-ized markdown */
+/* designed originally by uxamanda (https://discourse.joplinapp.org/u/uxamanda). latest version https://github.com/amandamcg/joplin-theme */
+/* Redesigned by Stephen (robotcorner) https://https://github.com/robotcorner/joplin-theme-dark-gruvbox */
+
+:root {
+    /* My colors */
+    --color00: #3D0008;
+    --color01: #4F000B;
+    --color02: #610019;
+    --color03: #720026;
+    --color04:#CE4257;
+    --color04-access: #DB7584;
+    --color05: #E76154;
+    --color06: #FF7F51;
+    --color07: #FF9B54;
+    --color01-transparent: #4F000B80;
+
+    --pear: #c2e812ff;
+    --butterscotch: #d9903fff;
+    --bittersweet: #e56455ff;
+    --cerise: #f0386bff;
+    --sky-magenta: #d47cadff;
+    --periwinkle: #b7c0eeff;
+    --periwinkle-trans: #b7c0ee31;
+    --royal-blue: #5C77E0ff;
+    --persian-blue: #012ed2ff;
+    --night: #111216ff;
+    --night-black: #0D0E11ff;
+    --black: #09090cff;
+
+    --font-title: "GFS Artemisia", "Gentium Plus";
+    --font-sans:  "GFS Artemisia", "Gargi", "Gentium Plus"; /*Montserrat or Corbel*/
+    --font-mono:  "Ubuntu Mono";
+    --font-bold:  "GFS Artemisia", "Gargi", "Gentium Plus";
+
+    --font-size: 15px;
+    --mono-size: 12px;
+    --icon-size: var(--font-size);
+}
+
+
+
+#rendered-md {
+    font-family: var(--font-sans) !important;
+    background: var(--night-black) !important;
+    color: var(--periwinkle) !important;
+}
+
+body {
+    font-family: var(--font-sans) !important;
+    color: var(--periwinkle) !important;
+    font-size: var(--font-size) !important;
+    background-color: var(--night-black) !important;
+    font-weight: light !important;
+    border-right: 10px solid var(--night) !important;
+}
+
+h1, h2, h3, h4, h5, h6, ul, table {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+p {
+    margin-top: 16px !important;
+    margin-bottom: 0px !important;
+}
+
+h1, h2, h3, h4 {
+    padding-top: 15px !important;
+    padding-bottom: 0px !important;
+    font-family: var(--font-title);
+}
+
+h1 {
+    font-family: var(--font-title) !important;
+    color: var(--butterscotch) !important;
+    font-size: calc(var(--font-size)*2) !important;
+    border-bottom: none !important;
+    text-align: center !important;
+/*     line-height: 20px !important; */
+/*     border-radius: 16px !important; */
+/*     line-height: calc(var(--font-size)*2.5) !important; */
+/*     padding-top: 5px !important; */
+/*     margin-top: 0px !important; */
+/*     font-weight: bold !important; */
+}
+
+h1:first-child {
+    margin-top: 0px !important;
+}
+
+
+
+h2 {
+    color: var(--persian-blue) !important;
+    font-size: calc(var(--font-size)*1.5) !important;
+    /* text-align: center !important; */
+/*     font-weight: bold !important; */
+}
+
+h3 {
+    color: var(--persian-blue) !important;
+    font-size: calc(var(--font-size)*1.3) !important;
+/*     font-weight: bold !important; */
+}
+
+h4 {
+    color: var(--sky-magenta) !important;
+    font-size: var(--font-size) !important;
+}
+
+p, li {
+/*     letter-spacing: .03em; */
+    color: var(--periwinkle);
+/*     margin-bottom: var(--base-size-1) !important; */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Bold */
+strong {
+    font-family: var(--font-bold) !important;
+    color: var(--pear) !important;
+    font-weight: bold !important;
+}
+
+/*Italics*/
+em {
+    font-family: var(--font-sans) !important;
+    color: var(--bittersweet) !important;
+    font-weight: italic !important;
+}
+
+/* Table title and rows */
+tr, td {
+    font-family: var(--font-sans) !important;
+    color: var(--royal-blue) !important;
+}
+
+
+/*ol li, ul li {
+    margin-bottom: var(4px);
+}*/
+
+/*ul ul {
+/*     list-style-type: disc; */
+    /*color: var(--col-ital) !important;
+}*/
+
+/*hr {
+    padding: var(--base-size-11) !important;
+}*/
+
+blockquote {
+    /* color: var(--col-border-font) !important; */
+    font-style: regular !important;
+    opacity: 1;
+    padding-right: 4px !important;
+    border-radius: 4px !important;
+    border-left: 4px solid black !important;
+    border-right: 4px solid black !important;
+    /* background-color: var(--black); */
+}
+
+blockquote p {
+    color: var(--royal-blue) !important;
+}
+
+blockquote strong {
+    font-style: bold !important;
+    color: var(--sky-magenta) !important;
+}
+
+blockquote em {
+    font-style: italic !important;
+    color: var(--sky-magenta) !important;
+}
+
+li.md-checkbox [type="checkbox"]:not(:checked),
+li.md-checkbox [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+    /* margin-left: -32px !important; */
+}
+
+li.md-checkbox [type="checkbox"]:not(:checked) + label,
+li.md-checkbox [type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 1.5em;
+/*     cursor: pointer; */
+    /* margin-left: -32px !important; */
+}
+
+/* checkbox aspect */
+li.md-checkbox [type="checkbox"]:not(:checked) + label:before,
+li.md-checkbox [type="checkbox"]:checked + label:before {
+    /* content: '☐'; */
+    content: "▢";
+    position: absolute;
+    left: 0;
+    top: -4px;
+    color: var(--periwinkle-trans);
+}
+
+/* checked mark aspect */
+li.md-checkbox [type="checkbox"]:not(:checked) + label:after,
+li.md-checkbox [type="checkbox"]:checked + label:after {
+    /* content: '✓'; */
+    content: '⭐';
+    position: absolute;
+    left: -2px; 
+    top: -4px;
+    width: 1em !important; 
+    height: 1em !important;
+    transition: all .9s;
+}
+
+/* checked mark aspect changes */
+li.md-checkbox [type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+
+li.md-checkbox [type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+a, summary {
+    text-decoration: none !important;
+/*     padding: 0 0 4px 0 !important; */
+    color: var(--persian-blue) !important;
+    font-family: var(--font-mono) !important;
+    font-weight: var(--font-weight-bold) !important;
+}
+
+a:hover {
+    border-bottom: 1px dashed var(--persian-blue) !important;
+}
+
+/* Links */
+a[data-resource-id] {
+    font-family: var(--font-mono) !important;
+    color: var(--persian-blue) !important;
+}
+
+a[data-resource-id] :hover {
+    border-bottom: 1px dashed var(--persian-blue) !important;
+    padding: 3px;
+}
+
+/* Code blocks */
+pre {
+    font-family: var(--font-mono) !important;
+    font-size: var(--mono-size) !important;
+    border: 2px solid black !important;
+    border-radius: 8px !important;
+    background: var(--black) !important;
+    color: var(--royal-blue) !important;
+    padding: 1em !important;
+}
+
+/* ```inline code``` */
+.inline-code {
+/*     font-family: var(--font-mono) !important; */
+    font-size: var(--mono-size) !important;
+    padding: .3em .3em !important;
+    border-radius: 4px !important;
+    background: var(--black) !important;
+    border: none !important;
+    color: var(--royal-blue) !important;
+}
+
+/* ==emphasis== */
+mark {
+    color: black !important;
+    padding: 4px !important;
+    border-radius: 4px !important;
+    border: none !important;
+    background-color: var(--pear);
+}
+
+/* Horizontal rule */
+hr {
+    border-bottom: 3px double var(--butterscotch) !important;
+}

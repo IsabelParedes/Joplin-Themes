@@ -1,0 +1,185 @@
+/* html-ized markdown for entire app */
+/* designed originally by uxamanda (https://discourse.joplinapp.org/u/uxamanda). latest version https://github.com/amandamcg/joplin-theme */
+/* Redesigned by Stephen (robotcorner) https://https://github.com/robotcorner/joplin-theme-dark-gruvbox */
+
+:root {
+    --pear: #c2e812ff;
+    --butterscotch: #d9903fff;
+    --bittersweet: #e56455ff;
+    --cerise: #f0386bff;
+    --sky-magenta: #d47cadff;
+    --periwinkle: #b7c0eeff;
+    --royal-blue: #5C77E0ff;
+    --persian-blue: #012ed2ff;
+    --night: #111216ff;
+    --night-black: #0D0E11ff;
+    --black: #09090cff;
+
+    --font-sans: "Ubuntu Condensed", "SpaceMono Nerd Font"; /*Bahnschrift */
+    --font-mono: "JetBrains Mono", "MonoSpatial";
+    --font-icon: "Noto Emoji", "Noto Color Emoji", "FontAwesome";
+
+    --font-size: 14px;
+    --font-size-code: 12px;
+    --icon-size: var(--font-size);
+}
+
+* {
+    font-family: var(--font-sans) !important;
+    font-size: var(--font-size) !important;
+    background-color: var(--night) !important;
+    color: var(--royal-blue) !important;
+    border-color: #00000000 !important;
+}
+
+/* Editor */
+.CodeMirror-lines, .CodeMirror-sizer, pre, .CodeMirror-scroll, .CodeMirror-line span {
+    background-color: var(--black) !important;
+    color: var(--royal-blue) !important;
+    font-size: var(--font-size-code) !important;
+    font-family: var(--font-mono) !important;
+}
+
+pre {
+    padding: 0px !important;
+    padding-left: 5px !important;
+}
+
+/* Carets on the side */
+.fa, .far, .fas {
+    color: var(--periwinkle) !important;
+    font-family: var(--font-icon) !important;
+    font-weight: 300 !important;
+}
+.fa-long-arrow-alt-up:before {
+    content: "↟" !important;
+}
+
+.fa-long-arrow-alt-down:before {
+    content: "↡" !important;
+}
+
+.fa-markdown:before {
+    content: "M↓" !important;
+}
+/* .fa-caret-right:before {
+    content: "▸" !important;
+    font-size: 16px !important;
+}
+.fa-caret-down:before {
+    content: "▾" !important;
+    font-size: 16px !important;
+}
+.fa-plus:before {
+    content: "+" !important;
+    color: var(--butterscotch) !important;
+} */
+
+.fa-folder:before {
+    /* content: "📁" !important; */
+    content: "💀" !important;
+    display: inline-block;
+    transform: rotate(0deg) !important;
+}
+
+span.title {
+    color: var(--periwinkle) !important;
+}
+
+.ace_heading {
+    color: var(--cerise) !important;
+}
+
+button {
+    background: var(--night-black) !important;
+    border: 1px solid black !important;
+    color: var(--royal-blue) !important;
+    border-radius: 5px !important;
+}
+
+button span {
+    background: var(--black) !important;
+}
+
+.list-item-container.note-list-item::before {
+    border-bottom: 0px !important;
+}
+
+.list-item-container.selected a {
+    background: var(--persian-blue) !important;
+}
+
+.list-item-container.selected a span {
+    background: var(--persian-blue) !important;
+    color: white !important;
+}
+
+.list-item-container.selected .note-count-label,
+.list-item-container.selected .fa-folder,
+.list-item-container.selected .emoji-box,
+.list-item-container.selected .fa-caret-right:before,
+.list-item-container.selected .fa-caret-down:before {
+    background: var(--persian-blue) !important;
+}
+
+.rli-noteList {
+    border-left: 2px solid var(--night-black) !important;
+}
+
+pre .cm-header {
+    color: var(--persian-blue) !important;
+}
+
+pre .cm-header-1 {
+    font-size: calc(100% + 8px) !important;
+}
+pre .cm-header-2 {
+    font-size: calc(100% + 4px) !important;
+}
+pre .cm-header-3 {
+    font-size: calc(100% + 2px) !important;
+}
+
+pre .cm-tag,
+pre .cm-hd {
+    color: var(--periwinkle) !important;
+}
+
+pre .cm-strong {
+    color: var(--butterscotch) !important;
+}
+
+pre .cm-em {
+    color: var(--bittersweet) !important;
+}
+
+pre .cm-katex-marker-open,
+pre .cm-katex-marker-close {
+    color: var(--butterscotch) !important;
+}
+
+pre .cm-meta,
+pre .cm-property {
+    color: var(--cerise) !important;
+}
+
+pre .cm-comment {
+    color: #777777 !important;
+}
+
+pre .cm-comment.cm-jn-inline-code {
+    border: 0px solid black !important;
+    color: var(--pear) !important;
+}
+
+pre .cm-hr {
+    color: var(--bittersweet) !important;
+}
+
+.cfyNmp {
+    border: 0px solid black !important;
+}
+
+span.updated-time-label {
+    padding-right: 1em !important;
+}
